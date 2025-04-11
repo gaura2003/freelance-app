@@ -33,6 +33,13 @@ import Terms from "../pages/TermsOfService.jsx";
 // import Cookies from "../pages/Cookies.jsx";
 import NotFound from "../pages/NotFound.jsx";
 
+// New membership-related imports
+import Memberships from "../pages/Memberships.jsx";
+import MembershipDetails from "../pages/MembershipDetails.jsx";
+import MembershipCheckout from "../pages/MembershipCheckout.jsx";
+import MembershipSuccess from "../pages/MembershipSuccess.jsx";
+import MembershipManagement from "../pages/MembershipManagement.jsx";
+
 // Trend Pages
 import TrendRemoteWork from "../pages/trends/RemoteWork.jsx";
 import TrendAITools from "../pages/trends/AITools.jsx";
@@ -164,6 +171,14 @@ const AppRoutes = () => {
             <FindFreelancers />
           </ProtectedRoute>
         } /> */}
+
+        
+        {/* Membership Routes */}
+        <Route path="/memberships" element={<Memberships />} />
+        <Route path="/memberships/:id" element={<MembershipDetails />} />
+        <Route path="/membership-checkout/:id" element={<MembershipCheckout />} />
+        <Route path="/membership-success" element={<MembershipSuccess />} />
+        <Route path="/membership-management" element={<MembershipManagement />} />
       </Route>
       
       {/* Admin Routes with AdminLayout */}
@@ -272,12 +287,12 @@ export default AppRoutes;
 //         <Route path="/payments" element={<Payments />} />
 //         <Route path="/payment-history" element={<PaymentHistory />} />
         
-//         {/* Membership Routes */}
-//         <Route path="/memberships" element={<Memberships />} />
-//         <Route path="/memberships/:id" element={<MembershipDetails />} />
-//         <Route path="/membership-checkout/:id" element={<MembershipCheckout />} />
-//         <Route path="/membership-success" element={<MembershipSuccess />} />
-//         <Route path="/membership-management" element={<MembershipManagement />} />
+        // {/* Membership Routes */}
+        // <Route path="/memberships" element={<Memberships />} />
+        // <Route path="/memberships/:id" element={<MembershipDetails />} />
+        // <Route path="/membership-checkout/:id" element={<MembershipCheckout />} />
+        // <Route path="/membership-success" element={<MembershipSuccess />} />
+        // <Route path="/membership-management" element={<MembershipManagement />} />
         
 //         {/* Static Pages */}
 //         <Route path="/about" element={<About />} />
